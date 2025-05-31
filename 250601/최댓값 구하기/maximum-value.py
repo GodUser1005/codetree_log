@@ -3,7 +3,7 @@ if a > b:
     if a > c:
         print(a)
     else:
-        print(b)
+        print(c)
 else:
     if b > c:
         print(b)
