@@ -1,4 +1,4 @@
-a = list(map(int,input().split()))
+a = [int(input()) for _ in range(5)]
 satisfied = True
 for i in a:
     if i % 3 != 0:
