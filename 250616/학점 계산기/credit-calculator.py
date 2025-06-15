@@ -1,0 +1,5 @@
+n = int(input())
+scores = list(map(float,input().split()))
+g = sum(scores)/len(scores)
+print(f"{g:.1f}")
+print('Perfect' if g >= 4.0 else 'Good' if g >= 3.0 else 'Poor')
