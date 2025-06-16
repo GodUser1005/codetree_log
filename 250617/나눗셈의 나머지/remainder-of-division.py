@@ -6,6 +6,6 @@ while a >= 1:
     arr.append(d)
 
 count_arr = [0]*b
-for a in arr:
-    count_arr[a] += 1
+for i in arr:
+    count_arr[i] += 1
 print(sum([i**2 for i in count_arr]))
