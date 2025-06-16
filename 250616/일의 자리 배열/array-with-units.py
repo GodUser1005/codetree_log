@@ -4,4 +4,5 @@ for i in range(8):
     temp = a+b
     temp %= 10
     print(temp,end=" ")
-    a,b = b,temp
+    a = b
+    b = temp
