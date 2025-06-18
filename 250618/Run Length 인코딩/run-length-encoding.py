@@ -12,8 +12,8 @@ for char in A:
         cnt = 1
         prev = char
         result += char
-if cnt > 1:
-    result += str(cnt)
+
+result += str(cnt)
 
 print(len(result))
 print(result)
