@@ -1,7 +1,7 @@
 s = input()
 
 for c in s:
-    if c.isalpha():
+    if 'A' <= c <= 'Z' or 'a' <= c <= 'z':
         print(c.lower(),end="")
-    elif c.isdigit():
+    elif '0' <= c <= '9':
         print(c,end="")
