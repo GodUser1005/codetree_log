@@ -7,7 +7,7 @@ def operate(o,a,c):
     if o == '+':
         return a + c
     elif o == '-':
-        return a - b
+        return a - c
     elif o == '*':
         return a * c
     elif o == '/':
