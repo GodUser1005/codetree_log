@@ -1,18 +1,14 @@
 a,b = input().split()
 
-int_a = ""
-int_b = ""
+for i in range(len(a)):
+    if not a[i].isdigit():
+        a = int(a[:i])
+        break
+    
 
-for c in a:
-    if c.isdigit():
-        int_a += c
-    else:
+for i in range(len(b)):
+    if not b[i].isdigit():
+        b = int(b[:i])
         break
 
-for c in b:
-    if c.isdigit():
-        int_b += c
-    else:
-        break
-
-print(int(int_a)+int(int_b))
+print(a+b)
