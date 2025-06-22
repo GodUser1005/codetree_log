@@ -6,7 +6,11 @@ arr = list(map(int, input().split()))
 def max_element(n):
     if n == 1:
         return arr[0]
-    return arr[n-1] if max_element(n-1) < arr[n-1] else max_element(n-1)
+    prev = max_element(n-1)
+    if prev > arr[n-1]:
+        return prev
+    else:
+        return arr[n-1]
 
 print(max_element(n))
     
