@@ -5,7 +5,7 @@ seconds = int(seconds)
 class Bomb:
     def __init__(self,unlock_code,wire_color,seconds):
         self.unlock_code = unlock_code
-        self.color = color
+        self.wire_color = wire_color
         self.seconds = seconds
 
 bomb = Bomb(unlock_code,wire_color,seconds)
