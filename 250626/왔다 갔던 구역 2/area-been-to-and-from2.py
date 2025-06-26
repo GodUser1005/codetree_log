@@ -13,14 +13,13 @@ for i in range(n):
     xi = x[i]
     di = dir[i]
     new_pos = pos + (xi if di == 'R' else -xi)
-    for i in range(min(new_pos,pos),max(new_pos,pos)):
-        arr[i] += 1
+    for j in range(min(pos,new_pos),max(pos,new_pos)):
+        arr[j] += 1
     pos = new_pos
 
 count = 0
-for c in arr:
-    if c >= 2:
+for i in range(len(arr)):
+    if arr[i] >= 2:
         count += 1
 
 print(count)
-
