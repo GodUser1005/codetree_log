@@ -9,4 +9,4 @@ for i in range(12):
 
 diff = (sum_days[m2-1]+d2)-(sum_days[m1-1]+d1)
 
-print(diff//7 + 1 if A != "Mon" else diff//7 + 2)
+print(diff // 7 + 1)
