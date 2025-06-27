@@ -10,6 +10,11 @@ for _ in range(n):
 # Please write your code here.
 mat = [[0] * 201 for _ in range(201)]
 offset = 100
+for i in range(n):
+    x1[i] += offset
+    x2[i] += offset
+    y1[i] += offset
+    y2[i] += offset
 
 for i in range(n):
     for j in range(x1[i],x2[i]):
