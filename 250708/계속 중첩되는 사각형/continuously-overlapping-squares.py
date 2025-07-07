@@ -20,8 +20,8 @@ for i in range(n):
                 mat[j][k] = 2
 
 s = 0
-for j in range(y1[i]+offset,y2[i]+offset):
-    for k in range(x1[i]+offset,x2[i]+offset):
+for j in range(2*offset + 1):
+    for k in range(2*offset+1):
         if mat[j][k] == 2:
             s += 1
 print(s)
