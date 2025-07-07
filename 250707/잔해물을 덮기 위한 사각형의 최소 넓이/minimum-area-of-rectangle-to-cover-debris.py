@@ -1,6 +1,8 @@
 x1, y1, x2, y2 = [0] * 2, [0] * 2, [0] * 2, [0] * 2
 x1[0], y1[0], x2[0], y2[0] = map(int, input().split())
 x1[1], y1[1], x2[1], y2[1] = map(int, input().split())
+# x1[0], y1[0], x2[0], y2[0] = -37, 38, 69, 64
+# x1[1], y1[1], x2[1], y2[1] = -85, -28, 64, 67
 
 # Please write your code here.
 offset = 1000
@@ -36,18 +38,20 @@ rec_height = y2[0] - y1[0]
 
 blank_length = up_right[0] - bottom_left[0]
 blank_height = up_right[1] - bottom_left[1]
+# print(rec_length,rec_height)
+# print(blank_length,blank_height)
 
 if blank_length < rec_length and blank_height < rec_height:
     print(rec_length*rec_height)
 elif blank_length == rec_length and blank_height == rec_height:
     print(0)
 elif blank_length == rec_length and blank_height < rec_height:
-    if bottom_left[1] != y1[0] and up_right[1] != y2[0]:
+    if bottom_left[1] != y1[0]+offset and up_right[1] != y2[0]+offset:
         print(rec_length*rec_height)
     else:
         print(rec_length * (rec_height - blank_height))
 elif blank_length < rec_length and blank_height == rec_height:
-    if bottom_left[0] != x1[0] and up_right[0] != x2[0]:
+    if bottom_left[0] != x1[0]+offset and up_right[0] != x2[0]+offset:
         print(rec_length*rec_height)
     else:
         print((rec_length - blank_length) * rec_height)
