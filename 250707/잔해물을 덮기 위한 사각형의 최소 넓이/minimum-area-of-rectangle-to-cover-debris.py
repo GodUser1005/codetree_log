@@ -36,8 +36,8 @@ up_right = find_up_right()
 rec_length = x2[0] - x1[0]
 rec_height = y2[0] - y1[0]
 
-length = up_right[1] - bottom_left[1]
-height = up_right[0] - bottom_left[0]
+length = up_right[0] - bottom_left[0]
+height = up_right[1] - bottom_left[1]
 
 if rec_length != length and rec_height != height:
     print(rec_length * rec_height)
