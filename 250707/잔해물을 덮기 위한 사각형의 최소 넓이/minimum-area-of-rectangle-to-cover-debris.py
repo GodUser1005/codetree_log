@@ -40,12 +40,12 @@ height = up_right[0] - bottom_left[0]
 if rec_length != length and rec_height != height:
     print(rec_length * rec_height)
 elif rec_length == length:
-    if bottom_left[0] != (y1[0] + offset) and up_right[0] != y2[0] + offset - 1:
+    if bottom_left[0] != (y1[0] + offset) and up_right[0] != y2[0] + offset:
         print(rec_length * rec_height)
     else:
         print(rec_length * (rec_height-height))
 elif rec_height == height:
-    if bottom_left[1] != (x1[0] + offset) and up_right[1] != x2[0] + offset - 1:
+    if bottom_left[1] != (x1[0] + offset) and up_right[1] != x2[0] + offset:
         print(rec_length * rec_height)
     else:
         print((rec_length-length) * rec_height)
