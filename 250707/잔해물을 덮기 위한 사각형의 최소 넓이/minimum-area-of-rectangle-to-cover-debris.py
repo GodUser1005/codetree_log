@@ -25,8 +25,8 @@ def find_up_right():
     for i in range(y2[0]+offset-1,y1[0]+offset-1,-1):
         for j in range(x2[0]+offset-1,x1[0]+offset-1,-1):
             if mat[i][j] == 0:
-                return i,j
-    return y2[0]+offset-1, x2[0]+offset-1
+                return i+1,j+1
+    return y2[0]+offset, x2[0]+offset
 
 bottom_left = find_bottom_left()
 up_right = find_up_right()
