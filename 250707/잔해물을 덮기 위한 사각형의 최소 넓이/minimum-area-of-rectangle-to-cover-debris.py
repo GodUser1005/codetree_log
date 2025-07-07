@@ -1,6 +1,8 @@
 x1, y1, x2, y2 = [0] * 2, [0] * 2, [0] * 2, [0] * 2
 x1[0], y1[0], x2[0], y2[0] = map(int, input().split())
 x1[1], y1[1], x2[1], y2[1] = map(int, input().split())
+# x1[0], y1[0], x2[0], y2[0] =-19, -16, 17, 1
+# x1[1], y1[1], x2[1], y2[1] = -68, -79, 17, 11
 
 # Please write your code here.
 offset = 1000
