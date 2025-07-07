@@ -12,16 +12,16 @@ offset = 100
 mat = [[0] * (2*offset +1) for _ in range(2*offset+1)]
 
 for i in range(n):
-    for j in range(y1[i],y2[i]):
-        for k in range(x1[i],x2[i]):
+    for j in range(y1[i]+offset,y2[i]+offset):
+        for k in range(x1[i]+offset,x2[i]+offset):
             if i % 2 == 0:
                 mat[j][k] = 1
             else:
                 mat[j][k] = 2
 
 s = 0
-for j in range(y1[i],y2[i]):
-    for k in range(x1[i],x2[i]):
+for j in range(y1[i]+offset,y2[i]+offset):
+    for k in range(x1[i]+offset,x2[i]+offset):
         if mat[j][k] == 2:
             s += 1
 print(s)
