@@ -20,12 +20,12 @@ def initiate(k):
 
 def reflect(d_i,mirror):
     if mirror == '/':
-        if directions[d_i] == 0:
+        if directions[d_i][0] == 0:
             return (d_i + 3) % 4
         else:
             return (d_i + 1) % 4
     else:
-        if directions[d_i] == 0:
+        if directions[d_i][0] == 0:
             return (d_i + 1) % 4
         else:
             return (d_i + 3) % 4
@@ -34,8 +34,8 @@ def move(d_i):
     pos[0] += directions[d_i][0]
     pos[1] += directions[d_i][1]
 
-
-pos,d_i = initiate(int(input()))
+k = int(input())
+pos,d_i = initiate(k)
 
 cnt = 0
 while True:
@@ -43,8 +43,13 @@ while True:
     mirror = mat[pos[0]][pos[1]]
     if mirror != 0:
         cnt += 1
-        reflect(d_i,mirror)
+        d_i = reflect(d_i,mirror)
     else:
         break
 
 print(cnt)
+
+# for row in mat:
+#     for e in row:
+#         print(e,end=" ")
+#     print()
