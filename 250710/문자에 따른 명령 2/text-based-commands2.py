@@ -13,7 +13,7 @@ for dir in dirs:
     elif dir == 'R':
         look_at_index = (look_at_index + 1) % 4
     elif dir == 'F':
-        pos[0] += pos[0] + dx[look_at_index]
-        pos[1] += pos[1] + dy[look_at_index]
+        pos[0] += dx[look_at_index]
+        pos[1] += dy[look_at_index]
 
 print(pos[0],pos[1])
