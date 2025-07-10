@@ -23,10 +23,11 @@ for _ in range(t):
     tmp = [r,c]
     tmp[0] += directions[d][0]
     tmp[1] += directions[d][1]
-    if 0 < tmp[0] < n+1 and 0 < tmp[1] < n+1:
+    if (1 <= tmp[0] <= n) and (1 <= tmp[1] <= n):
         r,c = tmp
     else:
         d = switch_direction(d)
+    # print(r,c,d )
 
 print(r,c)
 
