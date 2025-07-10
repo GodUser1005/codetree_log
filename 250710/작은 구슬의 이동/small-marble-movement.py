@@ -12,9 +12,10 @@ n,t = map(int,input().split())
 r,c,d = input().split()
 r,c = map(int,(r,c))
 
+
 directions = {
-    'U':(1,0),
-    'D':(-1,0),
+    'U':(-1,0),
+    'D':(1,0),
     'R':(0,1),
     'L':(0,-1)
 }
@@ -27,7 +28,7 @@ for _ in range(t):
         r,c = tmp
     else:
         d = switch_direction(d)
-    # print(r,c,d )
+
 
 print(r,c)
 
