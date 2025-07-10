@@ -26,7 +26,8 @@ for i in range(n):
             break
     if pos == [0,0]:
         break
-print(time)
+
+print(time if pos == [0,0] else -1)
 
 
 
