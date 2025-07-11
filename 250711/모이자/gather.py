@@ -9,7 +9,6 @@ for i in range(n):
     distance = 0
     for j in range(n):
         distance += (abs(i-j) * arr[j])
-    if min_distance > distance:
-        min_distance = distance
+    min_distance = min(distance,min_distance)
 
 print(min_distance)
