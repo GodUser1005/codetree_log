@@ -17,8 +17,7 @@ for j in range(1,n-1):
             continue
         dist += cal_dist(prev_point,points[i])
         prev_point = points[i]
-    if dist < min_dist:
-        min_dist = dist
+    min_dist = min(dist,min_dist)
 
 print(min_dist)
     
