@@ -22,8 +22,6 @@ def count_lee(pos):
             if mat[r+i][c] != lee[-(i+1)]:
                 is_eel = False
                 break
-        if is_lee:
-            count += 1
         if is_eel:
             count += 1
     if r + 2 < n and c + 2 < m:
@@ -40,8 +38,6 @@ def count_lee(pos):
             if mat[r+i][c+i] != lee[-(i+1)]:
                 is_eel = False
                 break
-        if is_lee:
-            count += 1
         if is_eel:
             count += 1
     if r + 2 < n and c - 2 >= 0:
@@ -58,8 +54,6 @@ def count_lee(pos):
             if mat[r+i][c-i] != lee[-(i+1)]:
                 is_eel = False
                 break
-        if is_lee:
-            count += 1
         if is_eel:
             count += 1
     return count
