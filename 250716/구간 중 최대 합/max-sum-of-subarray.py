@@ -5,7 +5,7 @@ n,k = map(int,input().split())
 numbers = list(map(int,input().split()))
 
 ans = MIN_INT
-for i in range(n-k):
+for i in range(n-k+1):
     ans = max(ans,sum(numbers[i:i+k]))
 
 print(ans)
