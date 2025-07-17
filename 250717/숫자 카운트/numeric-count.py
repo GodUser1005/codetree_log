@@ -14,6 +14,8 @@ pred = []
 for i in range(1,10):
     for j in range(1,10):
         for k in range(1,10):
+            if i == j or i == k or j == k:
+                continue
             satisfied = True
             for m in range(n):
                 c1,c2 = 0,0
