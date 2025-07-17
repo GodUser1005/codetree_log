@@ -15,7 +15,7 @@ for i in range(5):
             t = []
             t.append(arr[i])
             t.append(arr[j] + arr[k])
-            t.append(sum(arr) - t[0] - t[1])
+            t.append(sum(arr) - sum(t))
             if t[0] == t[1] or t[0] == t[2] or t[1] == t[2]:
                 continue
             ans = min(ans,max(t)-min(t))
