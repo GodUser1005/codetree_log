@@ -16,7 +16,7 @@ for i in range(n):
     c = 0
     for j in range(1,n+1):
         tmp_b -= total_cost[j-1]
-        if tmp_b > 0:
+        if tmp_b >= 0:
             c = j
     max_count = max(c,max_count)
 
