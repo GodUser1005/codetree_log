@@ -1,7 +1,7 @@
 x,y = map(int,input().split())
 
 def is_interesting_num(n):
-    l = list(str(n))
+    l = [int(i) for i in list(str(n))]
     l.sort()
     c = 0
     for i in range(len(l)-1):
