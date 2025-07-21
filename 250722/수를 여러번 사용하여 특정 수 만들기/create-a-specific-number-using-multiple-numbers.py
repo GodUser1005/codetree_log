@@ -10,9 +10,7 @@ for i in range(C//A + 1):
         ans = A * a_count + B * b_count
         if ans <= C:
             max_ans = max(max_ans,ans)
-        else:
-            break
-
+        
 print(max_ans)
 
 
