@@ -1,8 +1,6 @@
 n = int(input())
 log = [tuple(map(int,input().split())) for _ in range(n)]
 
-pos = [0,1,2]
-
 score = 0
 def cal_score(arr,a,b,c):
     a -= 1
@@ -14,11 +12,11 @@ def cal_score(arr,a,b,c):
         score += 1
 
 max_score = 0
-for i in pos:
+for i in range(3):
     tmp = [0]*3
     tmp[i] = 1
     for j in range(n):
-        cal_score(tmp,log[i][0],log[i][1],log[i][2])
+        cal_score(tmp,log[j][0],log[j][1],log[j][2])
     max_score = max(score,max_score)
     score = 0
 
