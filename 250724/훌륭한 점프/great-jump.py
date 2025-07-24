@@ -3,7 +3,7 @@ arr = list(map(int, input().split()))
 
 # Please write your code here.
 ans = 0
-for i in range(max(arr),0,-1):
+for i in range(max(arr),min(arr)-1,-1):
     jump_cnt = k - 1
     for num in arr:
         jump_cnt -= 1
