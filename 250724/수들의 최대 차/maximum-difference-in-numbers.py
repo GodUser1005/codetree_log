@@ -5,7 +5,7 @@ min_seq = min(seq)
 max_seq = max(seq)
 
 max_cnt = 0
-for i in range(min_seq, max_seq + 1 - k):
+for i in range(min_seq, max(max_seq + 1 - k, min_seq+k -1)):
     cnt = 0
     for num in seq:
         if i <= num <= i + k:
