@@ -18,7 +18,7 @@ bombs.sort()
 max_count = 0
 prev_num = -1
 count = 0
-ans = -1
+ans = 0
 for i in range(len(bombs)):
     if prev_num == bombs[i]:
         count += 1
