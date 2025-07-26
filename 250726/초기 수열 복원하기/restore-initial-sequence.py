@@ -9,7 +9,7 @@ for i in range(1,n+1):
     nums = [i]
     for sum in adjacent:
         next_num = sum - nums[-1]
-        if next_num in nums:
+        if (next_num in nums) or (next_num <= 0):
             satisfied = False
             break
         nums.append(next_num)
