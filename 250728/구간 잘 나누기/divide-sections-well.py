@@ -12,7 +12,6 @@ for i in range(max_sum,0,-1):
         if tmp_sum > i:
             count -= 1
             tmp_sum = a[j]
-    if count < 0:
-        ans = i + 1
-        break
+    if count == 0:
+        ans = i
 print(ans)
