@@ -5,19 +5,22 @@ for i in arr:
     counts[i] += 1
 
 
-def cal_h():
-    for i in range(1,n+1):
-        cnt = 0
-        for j in range(n):
-            if arr[j] >= i:
-                cnt += 1
-        if cnt < i:
-            return i-1
-    return n
+def count_more_than_h(h):
+    count = sum(counts[h:])
+    return count
 
-cur_h = cal_h()
+h = 1
+while True:
+    tmp = count_more_than_h(h)
+    # print(tmp)
+    if tmp >= h:
+        h += 1
+    elif l >= h - tmp:
+        l -= (h - tmp)
+        h += 1
+    else:
+        h -= 1
+        break
 
-if counts[cur_h+1] <= l:
-    print(cur_h + 1)
-else:
-    print(cur_h)
+print(h)
+        
