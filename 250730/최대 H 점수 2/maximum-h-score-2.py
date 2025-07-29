@@ -17,9 +17,10 @@ for i in range(1,n+1):
 
 while True:
     next_h = cur_h + 1
-    count_next = count_h(next_h)
-    if l >= next_h - count_next:
-        l -= (next_h - count_next)
+    count_cur = count_h(cur_h)
+    count_next = count_cur - count_h(next_h)
+    if l >= count_next and count_h(next_h) + count_next >= next_h:
+        l -= (count_h(next_h) + count_next - next_h)
         cur_h += 1
     else:
         break
