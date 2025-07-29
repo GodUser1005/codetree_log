@@ -5,7 +5,7 @@ c, d = map(int, input().split())
 
 ans = 0
 if a <= c <= b or c <= a <= d:
-    ans = max(d-a,b-c)
+    ans = max(d-a,b-c,b-a,c-d)
 else:
     ans = b-a + d-c
 
