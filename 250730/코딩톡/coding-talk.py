@@ -9,6 +9,9 @@ checks = [0] * n
 if logs[p-1][1] != 0:
     for c,u in logs[p-1:]:
         checks[ord(c)-ord('A')] = 1
+    for c,u in logs[p-2::-1]:
+        if u == logs[p-1][1]:
+            checks[ord(c)-ord('A')] = 1
 
     for i in range(n):
         if checks[i] == 0:
