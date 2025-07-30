@@ -6,9 +6,10 @@ for _ in range(m):
     logs.append((c,u))
 
 checks = [0] * n
-for c,u in logs[p-1:]:
-    checks[ord(c)-ord('A')] = 1
+if logs[p-1][1] != 0:
+    for c,u in logs[p-1:]:
+        checks[ord(c)-ord('A')] = 1
 
-for i in range(n):
-    if checks[i] == 0:
-        print(chr(ord('A') + i),end=" ")
+    for i in range(n):
+        if checks[i] == 0:
+            print(chr(ord('A') + i),end=" ")
