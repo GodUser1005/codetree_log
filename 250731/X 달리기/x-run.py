@@ -13,7 +13,6 @@ def cal_max_v(x):
         max_v += 1
 
 max_v = cal_max_v(x)
-a_dist = sum(range(1,max_v+1)) * 2 - max_v
-print((2*max_v - 1)+ (x - a_dist))
+print((2 * max_v - 1) + 1)
             
         
