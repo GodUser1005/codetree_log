@@ -8,11 +8,12 @@ if 1 in diff:
     print(1)
 else:
     diff.sort()
-    min_diff = diff[-1] // 2
-    max_near_diff = min_diff
+    nearest_diff = diff[-1]//2
     if len(diff) >= 2:
-        min_diff = min(min_diff,diff[0])
-        max_near_diff = min_diff
-    if seats[n-1] == '0':
-        min_diff = min(diff[-1],n-1 - positions[-1])
-    print(max(max_near_diff,min_diff))
+        nearest_diff = min(nearest_diff,diff[0])
+    if seats[-1] == '1':
+        print(nearest_diff)
+    else:
+        min_diff = min(diff[0],n-1 - positions[-1])
+        print(max(nearest_diff,min_diff))
+    
