@@ -9,7 +9,7 @@ if 1 in diff:
 else:
     diff.sort()
     min_diff = diff[-1] // 2
-    max_near_diff = 0
+    max_near_diff = min_diff
     if len(diff) >= 2:
         min_diff = min(min_diff,diff[0])
         max_near_diff = min_diff
