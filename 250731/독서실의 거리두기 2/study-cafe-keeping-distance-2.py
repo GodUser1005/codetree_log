@@ -15,5 +15,9 @@ else:
         print(nearest_diff)
     else:
         min_diff = min(diff[0],n-1 - positions[-1])
-        print(max(nearest_diff,min_diff))
+        if seats[0] == '0':
+            min_diff_2 = min(diff[0],positions[0])
+            print(max(nearest_diff,min_diff,min_diff_2))
+        else:
+            print(max(nearest_diff,min_diff))
     
