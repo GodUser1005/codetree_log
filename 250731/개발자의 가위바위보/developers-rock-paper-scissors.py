@@ -8,7 +8,7 @@ for a,b in logs:
         count_draw += 1
     elif a == 3 and b == 1:
         count_win += 1
-    elif b > a:
+    elif b > a and b-a == 1:
         count_win += 1
 
 count_win = max(count_win,n - count_draw - count_win)
