@@ -8,9 +8,8 @@ tmp = arr[:]
 i = 0
 while i < n:
     if tmp[i] == 1:
-        pos = i + 2*m
+        i += 2*m
         count += 1
-        i = pos
     i += 1
 
 print(count)
