@@ -14,4 +14,6 @@ if odd_count > even_count:
         basket_count += (odd_count // 3) * 2 - 1
     elif odd_count % 3 == 2:
         basket_count += ((odd_count // 3) * 2 + 1)
+else:
+    basket_count += 1
 print(basket_count)
