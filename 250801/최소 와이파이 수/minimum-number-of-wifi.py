@@ -10,7 +10,7 @@ while i < n:
     if tmp[i] == 1:
         pos = i + 2*m
         count += 1
-        i += pos
+        i = pos
     i += 1
 
 print(count)
