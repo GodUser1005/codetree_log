@@ -75,6 +75,10 @@ for command in commands:
         if new_node.next != None:
             new_node.next.prev = new_node
         iterator = new_node
+        if iterator.prev == dll.end():
+            dll.tail = new_node
+        elif iterator.next == dll.begin():
+            dll.head = new_node
         dll.size += 1
 
 iterator = dll.begin()
