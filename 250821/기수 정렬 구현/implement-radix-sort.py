@@ -1,12 +1,12 @@
 def ith_digit_string(num,i):
+    i = 5-i
     return int(f"{num:0>6d}"[i])
 
 def ith_digit_math(num,i):
-    i = 5-i
     return (num // (10**i)) % 10
 
 def radix_sort(arr):
-    for i in range(5,-1,-1):
+    for i in range(5):
         list_arr = [[] for _ in range(10)]
         for num in arr:
             list_arr[ith_digit_math(num,i)].append(num)
