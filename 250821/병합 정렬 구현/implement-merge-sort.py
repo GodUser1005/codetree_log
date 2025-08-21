@@ -21,9 +21,13 @@ def merge(left,right):
 
 def merge_sort(arr):
     n = len(arr)
-    left = merge_sort(arr[:n/2])
-    right = merge_sort(arr[n/2:])
+    if n == 1:
+        return arr
+    left = merge_sort(arr[:n//2])
+    right = merge_sort(arr[n//2:])
     arr = merge(left,right)
+    return arr
+
 
 n = int(input())
 arr = list(map(int, input().split()))
