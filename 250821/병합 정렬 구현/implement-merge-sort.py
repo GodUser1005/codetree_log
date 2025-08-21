@@ -1,37 +1,40 @@
-def merge(left,right):
-    left_i, right_i = 0,0
+def merge(arr, low, mid, high):
+    left_i = low
+    right_i = mid+1
+
     new_arr = []
-    while not (left_i == len(left) or right_i == len(right)):
-        left_num = left[left_i]
-        right_num = right[right_i]
-        if left_num < right_num:
-            new_arr.append(left_num)
+    while left_i <= mid and right_i <= high:
+        if arr[left_i] < arr[right_i]:
+            new_arr.append(arr[left_i])
             left_i += 1
         else:
-            new_arr.append(right_num)
+            new_arr.append(arr[right_i])
             right_i += 1
-    
-    if left_i == len(left):
-        new_arr += right[right_i:]
+
+    if left_i > mid:
+        for i in range(right_i,high+1):
+            new_arr.append(arr[i])
     else:
-        new_arr += left[left_i:]
-    return new_arr
+        for i in range(left_i,mid+1):
+            new_arr.append(arr[i])
+    
+    for i in range(len(new_arr)):
+        arr[low+i] = new_arr[i]
 
 
 
-def merge_sort(arr):
-    n = len(arr)
-    if n == 1:
-        return arr
-    left = merge_sort(arr[:n//2])
-    right = merge_sort(arr[n//2:])
-    arr = merge(left,right)
-    return arr
+
+def merge_sort(arr, low, mid, high):
+    if low < high:
+        merge_sort(arr, low, (low+mid) // 2, mid)
+        merge_sort(arr, mid+1, (mid+1 + high) // 2, high)
+        merge(arr, low, mid, high)
+
 
 
 n = int(input())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
-sorted_arr = merge_sort(arr)
-print(" ".join(list(map(str,sorted_arr))))
+merge_sort(arr,0, (len(arr)-1) // 2 ,len(arr)-1)
+print(" ".join(list(map(str,arr))))
