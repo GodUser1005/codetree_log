@@ -6,7 +6,7 @@ def ith_digit_math(num,i):
     return (num // (10**i)) % 10
 
 def radix_sort(arr):
-    for i in range(5):
+    for i in range(6):
         list_arr = [[] for _ in range(10)]
         for num in arr:
             list_arr[ith_digit_math(num,i)].append(num)
