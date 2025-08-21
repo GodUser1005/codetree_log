@@ -9,7 +9,7 @@ def radix_sort(arr):
     for i in range(6):
         list_arr = [[] for _ in range(10)]
         for num in arr:
-            list_arr[ith_digit_math(num,i)].append(num)
+            list_arr[ith_digit_string(num,i)].append(num)
 
         new_arr = []
         for j in range(10):
